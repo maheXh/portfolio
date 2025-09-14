@@ -94,8 +94,9 @@
       justify-content: center;
     }
     .hero-image img {
-      width: 150px;
-      height: 150px;
+      /* Increase the profile picture size for a more prominent hero image */
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #374151;
@@ -174,6 +175,23 @@
       display: flex;
       gap: 1rem;
     }
+
+    /* Animations */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* This class will trigger the fade-up animation once applied to an element */
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+    }
   </style>
 </head>
 <body>
@@ -193,7 +211,7 @@
   </header>
 
   <!-- Hero -->
-  <section id="about" class="container hero">
+      <section id="about" class="container hero fade-up" style="animation-delay:0s;">
     <div class="hero-content">
       <h1>
         Hi, I’m <span>Mahesh</span> — CSE undergrad passionate about deep learning, computer vision, and building practical AI systems.
@@ -201,9 +219,11 @@
       <p>
         Looking to collaborate on deep learning, computer vision, or generative AI. Open to internships and research opportunities.
       </p>
-      <div class="hero-info">
-        <i class="fa-solid fa-location-dot" style="color:#10b981;"></i> Coimbatore, India
-      </div>
+        <div class="hero-info">
+          <!-- Green location icon with slight spacing before the city name -->
+          <i class="fa-solid fa-location-dot" style="color:#10b981; margin-right:0.5rem;"></i>
+          Coimbatore, India
+        </div>
     </div>
     <div class="hero-image">
       <!-- Updated to use locally hosted profile image for reliability -->
@@ -212,7 +232,7 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="container">
+      <section id="experience" class="container fade-up" style="animation-delay:0.2s;">
     <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
     <div class="item">
       <h3>SDE Intern — Finance Automation</h3>
@@ -226,7 +246,7 @@
   </section>
 
   <!-- Research -->
-  <section id="research" class="container">
+      <section id="research" class="container fade-up" style="animation-delay:0.4s;">
     <h2><i class="fa-solid fa-flask"></i> Research</h2>
     <div class="item">
       <h3>Estimating Soil Moisture from Satellite Data</h3>
@@ -263,7 +283,7 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="container">
+      <section id="projects" class="container fade-up" style="animation-delay:0.6s;">
     <h2><i class="fa-solid fa-code"></i> Projects</h2>
     <div class="item">
       <h3>Deep Fake Detection</h3>
@@ -300,7 +320,7 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="container">
+      <section id="skills" class="container fade-up" style="animation-delay:0.8s;">
     <h2><i class="fa-solid fa-wrench"></i> Skills</h2>
     <div class="chips">
       <span class="chip">Python</span>
@@ -327,7 +347,7 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="container">
+      <section id="education" class="container fade-up" style="animation-delay:1s;">
     <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
     <div class="item">
       <h3>B.Tech in Computer Science &amp; Engineering</h3>
@@ -353,15 +373,15 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="container">
+      <section id="contact" class="container fade-up" style="animation-delay:1.2s;">
     <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
     <div class="item">
       <ul>
-        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:bmaheshraj23@gmail.com">bmaheshraj23@gmail.com</a></li>
-        <li><i class="fa-solid fa-phone"></i> <a href="tel:+918921662922">+91‑8921662922</a></li>
-        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/maheXh" target="_blank" rel="noopener">maheXh</a></li>
-        <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><i class="fa-solid fa-download"></i> <a href="resume.pdf" download>Download Resume</a></li>
+        <li><i class="fa-solid fa-envelope" style="color:#10b981; margin-right:0.4rem;"></i> <a href="mailto:bmaheshraj23@gmail.com">bmaheshraj23@gmail.com</a></li>
+        <li><i class="fa-solid fa-phone" style="color:#10b981; margin-right:0.4rem;"></i> <a href="tel:+918921662922">+91&#8209;8921662922</a></li>
+        <li><i class="fa-brands fa-github" style="color:#10b981; margin-right:0.4rem;"></i> <a href="https://github.com/maheXh" target="_blank" rel="noopener">maheXh</a></li>
+        <li><i class="fa-brands fa-linkedin" style="color:#10b981; margin-right:0.4rem;"></i> <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><i class="fa-solid fa-download" style="color:#10b981; margin-right:0.4rem;"></i> <a href="resume.pdf" download>Download Resume</a></li>
       </ul>
     </div>
   </section>
