@@ -206,8 +206,6 @@
       transition: transform 0.3s ease;
       margin-left: auto;
       color: #10b981;
-      font-size: 1.2rem;
-      font-weight: bold;
     }
     .expanded .expand-icon {
       transform: rotate(180deg);
@@ -224,10 +222,10 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease, padding 0.4s ease;
-      padding: 0;
+      padding: 0 1rem;
     }
     .expanded .expanded-content {
-      max-height: 1200px;
+      max-height: 800px;
       padding: 1rem;
     }
     .project-details {
@@ -392,7 +390,7 @@
             <li>Advanced satellite data processing with PyTorch/TensorFlow.</li>
           </ul>
         </div>
-        <span class="expand-icon">▼</span>
+        <i class="fa-solid fa-chevron-down expand-icon"></i>
       </div>
       <div class="expanded-content">
         <div class="project-details">
@@ -443,7 +441,7 @@
             <li>Pipeline with GNN autoencoders + diffusion for text‑prompted 4D mesh generation.</li>
           </ul>
         </div>
-        <span class="expand-icon">▼</span>
+        <i class="fa-solid fa-chevron-down expand-icon"></i>
       </div>
       <div class="expanded-content">
         <div class="project-details">
@@ -494,7 +492,7 @@
             <li>Target: clinically deployable nnU‑Net with reduced parameters/memory/latency.</li>
           </ul>
         </div>
-        <span class="expand-icon">▼</span>
+        <i class="fa-solid fa-chevron-down expand-icon"></i>
       </div>
       <div class="expanded-content">
         <div class="project-details">
@@ -545,7 +543,7 @@
             <li>Designing pipelines for real‑time waypoint prediction, scene understanding, and object detection on edge hardware.</li>
           </ul>
         </div>
-        <span class="expand-icon">▼</span>
+        <i class="fa-solid fa-chevron-down expand-icon"></i>
       </div>
       <div class="expanded-content">
         <div class="project-details">
@@ -590,209 +588,37 @@
   <!-- Projects -->
       <section id="projects" class="container fade-up" style="animation-delay:0.6s;">
     <h2><i class="fa-solid fa-code"></i> Projects</h2>
-    
-    <div class="item expandable-item" data-project="deepfake">
-      <div class="item-header">
-        <div class="item-title-content">
-          <h3>Deep Fake Detection</h3>
-          <div class="sub">Jan 2024 – Apr 2024</div>
-          <ul>
-            <li>Developed a video deepfake detection system leveraging multiple detectors with unique methodologies.</li>
-            <li>Built an ensemble framework where results were intelligently combined by a meta‑model based on detectors' historical performance.</li>
-          </ul>
-        </div>
-        <span class="expand-icon">▼</span>
-      </div>
-      <div class="expanded-content">
-        <div class="project-details">
-          <h4>Project Motivation</h4>
-          <p>With the increasing sophistication of deepfake technology, there's a critical need for robust detection systems. This project addresses the challenge of identifying manipulated video content through advanced ensemble learning techniques that combine multiple detection approaches for superior accuracy and robustness.</p>
-        </div>
-        <div class="project-details">
-          <h4>Technical Implementation</h4>
-          <p>The system implements multiple complementary detection algorithms including temporal inconsistency analysis, facial landmark tracking, and CNN-based artifact detection. A meta-learning framework dynamically weights each detector's contribution based on their historical performance on different types of deepfakes and video qualities.</p>
-        </div>
-        <div class="project-details">
-          <h4>Results & Impact</h4>
-          <p>Achieved 94% accuracy on the DFDC dataset and 96% on FaceForensics++, outperforming individual detectors by 8-12%. The ensemble approach shows particular strength in detecting novel deepfake techniques not seen during training, making it valuable for real-world deployment scenarios.</p>
-        </div>
-        <div class="image-slideshow">
-          <div class="slideshow-container">
-            <div class="slide active">
-              <img src="gallery/projects/deepfake/image1.jpg" alt="DeepFake Detection UI">
-              <div class="slide-caption">User interface for deepfake detection system</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/deepfake/image2.jpg" alt="Ensemble Architecture">
-              <div class="slide-caption">Ensemble architecture and meta-learning framework</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/deepfake/image3.jpg" alt="Detection Results">
-              <div class="slide-caption">Detection results and performance metrics</div>
-            </div>
-          </div>
-          <button class="slideshow-nav prev" onclick="changeSlide(this, -1)">❮</button>
-          <button class="slideshow-nav next" onclick="changeSlide(this, 1)">❯</button>
-          <div class="slideshow-dots">
-            <span class="dot active" onclick="currentSlide(this, 1)"></span>
-            <span class="dot" onclick="currentSlide(this, 2)"></span>
-            <span class="dot" onclick="currentSlide(this, 3)"></span>
-          </div>
-        </div>
-      </div>
+    <div class="item">
+      <h3>Deep Fake Detection</h3>
+      <div class="sub">Jan 2024 – Apr 2024</div>
+      <ul>
+        <li>Developed a video deepfake detection system leveraging multiple detectors with unique methodologies.</li>
+        <li>Built an ensemble framework where results were intelligently combined by a meta‑model based on detectors’ historical performance.</li>
+      </ul>
     </div>
-
-    <div class="item expandable-item" data-project="ddpm">
-      <div class="item-header">
-        <div class="item-title-content">
-          <h3>DDPM Image Generation</h3>
-          <div class="sub">2024</div>
-          <ul>
-            <li>Implemented a Denoising Diffusion Probabilistic Model (DDPM) for image synthesis as part of deep learning coursework.</li>
-            <li>Showcased diffusion‑based generative modeling and its applications in media synthesis and AI ethics demonstrations.</li>
-          </ul>
-        </div>
-        <span class="expand-icon">▼</span>
-      </div>
-      <div class="expanded-content">
-        <div class="project-details">
-          <h4>Academic Foundation</h4>
-          <p>This comprehensive implementation of Denoising Diffusion Probabilistic Models (DDPM) was developed as part of advanced deep learning coursework. The project demonstrates mastery of generative modeling techniques and provides insights into the mathematical foundations of diffusion-based image synthesis.</p>
-        </div>
-        <div class="project-details">
-          <h4>Technical Implementation</h4>
-          <p>Built from scratch using PyTorch, implementing the complete forward and reverse diffusion process with custom noise scheduling. The model includes advanced features like classifier-free guidance, DDIM sampling for faster inference, and progressive training strategies for stable convergence on high-resolution images.</p>
-        </div>
-        <div class="project-details">
-          <h4>Ethical Considerations</h4>
-          <p>The project includes comprehensive analysis of AI ethics in generative modeling, exploring potential misuse scenarios and developing guidelines for responsible deployment. Created educational demonstrations showing both the creative potential and risks associated with powerful generative AI systems.</p>
-        </div>
-        <div class="image-slideshow">
-          <div class="slideshow-container">
-            <div class="slide active">
-              <img src="gallery/projects/ddpm/image1.jpg" alt="DDPM Generated Images">
-              <div class="slide-caption">High-quality images generated by DDPM model</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/ddpm/image2.jpg" alt="Diffusion Process">
-              <div class="slide-caption">Visualization of the diffusion process</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/ddpm/image3.jpg" alt="Training Progress">
-              <div class="slide-caption">Training progress and loss curves</div>
-            </div>
-          </div>
-          <button class="slideshow-nav prev" onclick="changeSlide(this, -1)">❮</button>
-          <button class="slideshow-nav next" onclick="changeSlide(this, 1)">❯</button>
-          <div class="slideshow-dots">
-            <span class="dot active" onclick="currentSlide(this, 1)"></span>
-            <span class="dot" onclick="currentSlide(this, 2)"></span>
-            <span class="dot" onclick="currentSlide(this, 3)"></span>
-          </div>
-        </div>
-      </div>
+    <div class="item">
+      <h3>DDPM Image Generation</h3>
+      <div class="sub">2024</div>
+      <ul>
+        <li>Implemented a Denoising Diffusion Probabilistic Model (DDPM) for image synthesis as part of deep learning coursework.</li>
+        <li>Showcased diffusion‑based generative modeling and its applications in media synthesis and AI ethics demonstrations.</li>
+      </ul>
     </div>
-
-    <div class="item expandable-item" data-project="adobe-hackathon">
-      <div class="item-header">
-        <div class="item-title-content">
-          <h3>Adobe India Hackathon — Team Starks (Connecting the Dots)</h3>
-          <div class="sub">Jan 2025</div>
-          <ul>
-            <li>Built a lightweight CPU‑only offline system to transform static PDFs into dynamic, structured, persona‑aware knowledge artifacts.</li>
-            <li>Integrated quantized language models with object detection and semantic search to enable retrieval and summarization.</li>
-          </ul>
-        </div>
-        <span class="expand-icon">▼</span>
-      </div>
-      <div class="expanded-content">
-        <div class="project-details">
-          <h4>Hackathon Challenge</h4>
-          <p>The Adobe India Hackathon challenge focused on "Connecting the Dots" - creating intelligent systems that could transform static documents into interactive, knowledge-rich experiences. Our solution addressed the need for efficient document processing in resource-constrained environments without internet connectivity.</p>
-        </div>
-        <div class="project-details">
-          <h4>System Architecture</h4>
-          <p>Developed a complete offline pipeline using Qwen2.5-0.5B quantized to 4-bit precision with llama.cpp for efficient CPU inference. Integrated dual YOLOv8n models for layout analysis and object detection, SentenceTransformers for semantic embeddings, and K-means clustering for hierarchical document structure extraction.</p>
-        </div>
-        <div class="project-details">
-          <h4>Innovation & Results</h4>
-          <p>The system transforms static PDFs into persona-aware knowledge artifacts that adapt content presentation based on user profiles. Achieved sub-100MB deployment size while maintaining high accuracy in information extraction and retrieval. The solution enables semantic search and contextual summarization entirely offline.</p>
-        </div>
-        <div class="image-slideshow">
-          <div class="slideshow-container">
-            <div class="slide active">
-              <img src="gallery/projects/adobe-hackathon/image1.jpg" alt="PDF Processing System">
-              <div class="slide-caption">PDF processing and analysis pipeline</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/adobe-hackathon/image2.jpg" alt="Knowledge Extraction">
-              <div class="slide-caption">Knowledge extraction and structuring process</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/adobe-hackathon/image3.jpg" alt="Semantic Search UI">
-              <div class="slide-caption">Semantic search interface and results</div>
-            </div>
-          </div>
-          <button class="slideshow-nav prev" onclick="changeSlide(this, -1)">❮</button>
-          <button class="slideshow-nav next" onclick="changeSlide(this, 1)">❯</button>
-          <div class="slideshow-dots">
-            <span class="dot active" onclick="currentSlide(this, 1)"></span>
-            <span class="dot" onclick="currentSlide(this, 2)"></span>
-            <span class="dot" onclick="currentSlide(this, 3)"></span>
-          </div>
-        </div>
-      </div>
+    <div class="item">
+      <h3>Adobe India Hackathon — Team Starks (Connecting the Dots)</h3>
+      <div class="sub">Jan 2025</div>
+      <ul>
+        <li>Built a lightweight CPU‑only offline system to transform static PDFs into dynamic, structured, persona‑aware knowledge artifacts.</li>
+        <li>Integrated quantized language models with object detection and semantic search to enable retrieval and summarization.</li>
+      </ul>
     </div>
-
-    <div class="item expandable-item" data-project="fire-drone">
-      <div class="item-header">
-        <div class="item-title-content">
-          <h3>Fire Fighting Drone for Early Forest Fire Detection and Extinguishment</h3>
-          <div class="sub">2018</div>
-          <ul>
-            <li>Developed a drone capable of early forest fire detection and suppression with integrated surveillance and rapid response mechanisms.</li>
-            <li>Won multiple awards: CBSE Science Fair State Finalist, PPTIA Innovation Award National Finalist (Top 10), First Prize at Shastra Science Fair.</li>
-          </ul>
-        </div>
-        <span class="expand-icon">▼</span>
-      </div>
-      <div class="expanded-content">
-        <div class="project-details">
-          <h4>Project Genesis</h4>
-          <p>Inspired by increasing forest fire incidents and their devastating environmental impact, this project began as a high school innovation initiative in 2018. The goal was to create an autonomous system capable of early detection and immediate response to forest fires, potentially saving countless acres of forest and wildlife.</p>
-        </div>
-        <div class="project-details">
-          <h4>Technical Design</h4>
-          <p>The drone featured a custom-built frame with thermal imaging cameras for fire detection, GPS navigation for autonomous patrol routes, and an integrated fire suppression system using eco-friendly retardant. Real-time data transmission enabled ground control monitoring and emergency response coordination.</p>
-        </div>
-        <div class="project-details">
-          <h4>Recognition & Impact</h4>
-          <p>The project received recognition at multiple prestigious platforms: CBSE Science Fair State Finalist, PPTIA Innovation Award National Finalist (Top 10), and First Prize at Shastra Science Fair. The work demonstrated early innovation in environmental technology and sustainable engineering solutions for real-world problems.</p>
-        </div>
-        <div class="image-slideshow">
-          <div class="slideshow-container">
-            <div class="slide active">
-              <img src="gallery/projects/fire-drone/image1.jpg" alt="Fire Detection Drone">
-              <div class="slide-caption">Fire fighting drone prototype and design</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/fire-drone/image2.jpg" alt="Surveillance System">
-              <div class="slide-caption">Surveillance and detection system components</div>
-            </div>
-            <div class="slide">
-              <img src="gallery/projects/fire-drone/image3.jpg" alt="Award Ceremony">
-              <div class="slide-caption">Award ceremony and project recognition</div>
-            </div>
-          </div>
-          <button class="slideshow-nav prev" onclick="changeSlide(this, -1)">❮</button>
-          <button class="slideshow-nav next" onclick="changeSlide(this, 1)">❯</button>
-          <div class="slideshow-dots">
-            <span class="dot active" onclick="currentSlide(this, 1)"></span>
-            <span class="dot" onclick="currentSlide(this, 2)"></span>
-            <span class="dot" onclick="currentSlide(this, 3)"></span>
-          </div>
-        </div>
-      </div>
+    <div class="item">
+      <h3>Fire Fighting Drone for Early Forest Fire Detection and Extinguishment</h3>
+      <div class="sub">2018</div>
+      <ul>
+        <li>Developed a drone capable of early forest fire detection and suppression with integrated surveillance and rapid response mechanisms.</li>
+        <li>Won multiple awards: CBSE Science Fair State Finalist, PPTIA Innovation Award National Finalist (Top 10), First Prize at Shastra Science Fair.</li>
+      </ul>
     </div>
   </section>
 
