@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-dynamic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio with auto-regenerated image manifest",
+  "scripts": {
+    "start": "node server.js",
+    "gen": "node scripts/generate-manifests.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
